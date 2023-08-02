@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import TestButton from './components/TestButton';
+import TestButton from './src/components/TestButton';
 
 export default function App() {
   return (
