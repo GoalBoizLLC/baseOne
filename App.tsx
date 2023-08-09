@@ -1,21 +1,28 @@
+import React from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import TestButton from './src/components/TestButton';
+import ButtonComponent from './src/components/TestButton';
 
-export default function App() {
+interface TestButtonProps {
+  label: string;
+}
+
+ const App: React.FC<TestButtonProps> = ({ label }) => {
   return (
     <View style={styles.container}>
       <Text>Don't press the button!</Text>
 
       <View style={styles.testButton}>
-        <TestButton label="I am a button" />
+        <ButtonComponent label="I am a button" />
       </View>
       
       <StatusBar style="auto" />
     </View>
   );
 }
+
+export default App
 
 const styles = StyleSheet.create({
   container: {
