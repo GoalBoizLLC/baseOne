@@ -7,19 +7,12 @@ interface ButtonProps {
 }
 
 const ButtonComponent: React.FC<ButtonProps> = ({ label }) => {
-  const simpleAlert = () =>
-    Alert.alert(
-      "Welcome",
-      "This alert works!!",
-      [{ text: "OK", onPress: () => console.log("please work!") }],
-      {
-        cancelable: true,
-      }
-    );
-
   return (
     <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={simpleAlert}>
+      <Pressable
+        style={styles.button}
+        onPress={() => alert("You pushed the button!")}
+      >
         <Text>{label}</Text>
       </Pressable>
     </View>
